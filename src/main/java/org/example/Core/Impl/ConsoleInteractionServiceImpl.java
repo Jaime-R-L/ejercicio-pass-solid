@@ -1,6 +1,6 @@
-package org.example.services.impl;
+package org.example.Core.Impl;
 
-import org.example.services.ConsoleInteractionService;
+import org.example.Core.ConsoleInteractionService;
 
 import java.util.Scanner;
 

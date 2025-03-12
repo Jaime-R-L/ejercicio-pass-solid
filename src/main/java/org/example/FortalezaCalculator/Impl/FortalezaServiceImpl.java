@@ -1,8 +1,8 @@
-package org.example.services.impl;
+package org.example.FortalezaCalculator.Impl;
 
-import org.example.services.FortalezaCaracteresService;
-import org.example.services.FortalezaLongitudService;
-import org.example.services.FortalezaService;
+import org.example.FortalezaCalculator.FortalezaCaracteresService;
+import org.example.FortalezaCalculator.FortalezaLongitudService;
+import org.example.FortalezaCalculator.FortalezaService;
 
 public class FortalezaServiceImpl implements FortalezaService {
 

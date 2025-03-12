@@ -1,9 +1,10 @@
-package org.example.services.impl;
+package org.example.Core.Impl;
 
+import org.example.Core.ConsoleInteractionService;
+import org.example.Core.ContrasenyaService;
+import org.example.FortalezaCalculator.FortalezaService;
+import org.example.FortalezaCalculator.Impl.FortalezaServiceImpl;
 import org.example.configuration.Configuration;
-import org.example.services.ConsoleInteractionService;
-import org.example.services.ContrasenyaService;
-import org.example.services.FortalezaService;
 
 public class ContrasenyaServiceImpl implements ContrasenyaService {
     FortalezaService fortalezaService = new FortalezaServiceImpl();

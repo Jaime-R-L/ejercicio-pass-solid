@@ -9,4 +9,10 @@ public class Configuration {
     public static final int LIMITE_VALIDEZ_CONTRASENYA = 8;
     public static final String MSG_SOLI_CONT = "Ingresa tu contraseña: ";
     public static final String MSG_FORT_CONT = "Fortaleza de la contrasenya = ";
+    public static final String VALOR_CONT_MUY_DEBIL = "Muy Debil";
+    public static final String VALOR_CONT_DEBIL = "Debil";
+    public static final String VALOR_CONT_MODERADA = "Moderada";
+    public static final String VALOR_CONT_FUERTE = "Fuerte";
+    public static final String VALOR_CONT_MUY_FUERTE = "Muy Fuerte";
+    public static final String MSG_VALOR_CONT = "Valor de la contrasenya = ";
 }

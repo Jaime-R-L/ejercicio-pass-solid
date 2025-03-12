@@ -1,12 +1,14 @@
-package org.example.services.impl;
+package org.example.Core.Impl;
 
+import org.example.Core.ConsoleInteractionService;
+import org.example.Core.EvaluationService;
+import org.example.Core.ValorService;
 import org.example.configuration.Configuration;
-import org.example.services.ConsoleInteractionService;
-import org.example.services.EvaluationService;
 
 public class EvaluationServiceImpl implements EvaluationService {
 
     ConsoleInteractionService consoleInteractionService = new ConsoleInteractionServiceImpl();
+    ValorService valorService = new ValorServiceImpl();
 
     @Override
     public void evaluarContrasenya(int fortaleza) {
@@ -14,6 +16,8 @@ public class EvaluationServiceImpl implements EvaluationService {
             String respuesta = consoleInteractionService.solicitarDato(Configuration.MSG_CONT_DEBIL);
             contrasenyaDebil(respuesta, fortaleza);
         } else {
+            String valor = valorService.calculaValorContrasenya(fortaleza);
+            System.out.println(Configuration.MSG_VALOR_CONT + valor);
             System.out.print(Configuration.MSG_CONT_ACEPTADA);
         }
     }

@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.services.ContrasenyaService;
-import org.example.services.impl.ContrasenyaServiceImpl;
+import org.example.Core.ContrasenyaService;
+import org.example.Core.Impl.ContrasenyaServiceImpl;
 
 public class Main {
 

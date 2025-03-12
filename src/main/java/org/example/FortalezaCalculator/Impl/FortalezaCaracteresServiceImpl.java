@@ -1,9 +1,9 @@
-package org.example.services.impl;
+package org.example.FortalezaCalculator.Impl;
 
-import org.example.services.FortalezaCaracteresEspecialService;
-import org.example.services.FortalezaCaracteresMayusService;
-import org.example.services.FortalezaCaracteresNumService;
-import org.example.services.FortalezaCaracteresService;
+import org.example.FortalezaCalculator.FortalezaCaracteresEspecialService;
+import org.example.FortalezaCalculator.FortalezaCaracteresMayusService;
+import org.example.FortalezaCalculator.FortalezaCaracteresNumService;
+import org.example.FortalezaCalculator.FortalezaCaracteresService;
 
 public class FortalezaCaracteresServiceImpl implements FortalezaCaracteresService {
 

@@ -1,6 +1,6 @@
-package org.example.services.impl;
+package org.example.FortalezaCalculator.Impl;
 
-import org.example.services.FortalezaCaracteresEspecialService;
+import org.example.FortalezaCalculator.FortalezaCaracteresEspecialService;
 
 public class FortalezaCaracteresEspecialServiceImpl implements FortalezaCaracteresEspecialService {
     @Override
