@@ -1,25 +1,25 @@
 package org.example.services.impl;
 
+import org.example.services.FortalezaCaracteresEspecialService;
+import org.example.services.FortalezaCaracteresMayusService;
+import org.example.services.FortalezaCaracteresNumService;
 import org.example.services.FortalezaCaracteresService;
 
 public class FortalezaCaracteresServiceImpl implements FortalezaCaracteresService {
+
+    FortalezaCaracteresEspecialService fortalezaCaracteresEspecialService = new FortalezaCaracteresEspecialServiceImpl();
+    FortalezaCaracteresMayusService fortalezaCaracteresMayusService = new FortalezaCaracteresMayusServiceImpl();
+    FortalezaCaracteresNumService fortalezaCaracteresNumService = new FortalezaCaracteresNumServiceImpl();
+
     @Override
     public Integer calcularFortalezaCaracteres(String pass) {
         int fortaleza = 0;
-        
-        if (pass.matches(".*[a-z].*")) {
-            fortaleza += 1;
-        } else if (pass.matches(".*[a-zA-Z].*")) {
-            fortaleza += 2;
-        }
 
-        if (pass.matches(".*\\d.*")) {
-            fortaleza += 1;
-        }
+        fortaleza += fortalezaCaracteresEspecialService.calcularFortalezaCaracteresEspecial(pass);
 
-        if (pass.matches(".*[^a-zA-Z0-9].*")) {
-            fortaleza += 2;
-        }
+        fortaleza += fortalezaCaracteresMayusService.calcularFortalezaCaracteresMayus(pass);
+
+        fortaleza += fortalezaCaracteresNumService.calcularFortalezaCaracteresNum(pass);
 
         return fortaleza;
     }

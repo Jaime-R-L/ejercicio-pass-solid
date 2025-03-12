@@ -1,5 +1,6 @@
 package org.example.services.impl;
 
+import org.example.configuration.Configuration;
 import org.example.services.ConsoleInteractionService;
 import org.example.services.EvaluationService;
 
@@ -9,11 +10,11 @@ public class EvaluationServiceImpl implements EvaluationService {
 
     @Override
     public void evaluarContrasenya(int fortaleza) {
-        if (fortaleza < ConfigurationServiceImpl.LIMITE_VALIDEZ_CONTRASENYA) {
-            String respuesta = consoleInteractionService.solicitarDato(ConfigurationServiceImpl.MSG_CONT_DEBIL);
+        if (fortaleza < Configuration.LIMITE_VALIDEZ_CONTRASENYA) {
+            String respuesta = consoleInteractionService.solicitarDato(Configuration.MSG_CONT_DEBIL);
             contrasenyaDebil(respuesta, fortaleza);
         } else {
-            System.out.print(ConfigurationServiceImpl.MSG_CONT_ACEPTADA);
+            System.out.print(Configuration.MSG_CONT_ACEPTADA);
         }
     }
 
@@ -21,12 +22,12 @@ public class EvaluationServiceImpl implements EvaluationService {
         respuesta = respuesta.toLowerCase();
 
         if (respuesta.equals("yes") || respuesta.equals("y")) {
-            System.out.print(ConfigurationServiceImpl.MSG_CONT_ACEPTADA);
-            System.out.println(ConfigurationServiceImpl.MSG_FORT_CONT + fortaleza);
+            System.out.print(Configuration.MSG_CONT_ACEPTADA);
+            System.out.println(Configuration.MSG_FORT_CONT + fortaleza);
         } else if (respuesta.equals("no") || respuesta.equals("n")) {
-            System.out.print(ConfigurationServiceImpl.MSG_CONT_NO_ACEPTADA);
+            System.out.print(Configuration.MSG_CONT_NO_ACEPTADA);
         } else {
-            System.out.print(ConfigurationServiceImpl.MSG_ERROR_RESP_NO_VALIDA);
+            System.out.print(Configuration.MSG_ERROR_RESP_NO_VALIDA);
         }
     }
 }
