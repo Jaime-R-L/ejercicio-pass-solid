@@ -11,7 +11,7 @@ public class FortalezaServiceImpl implements FortalezaService {
     FortalezaLongitudService fortalezaLongitudService = new FortalezaLongitudServiceImpl();
 
     @Override
-    public Integer calcularFortaleza(String pass) {
+    public void calcularFortaleza(String pass) {
         Integer fortaleza = 0;
 
         fortaleza += fortalezaLongitudService.calcularFortalezaLongitud(pass);

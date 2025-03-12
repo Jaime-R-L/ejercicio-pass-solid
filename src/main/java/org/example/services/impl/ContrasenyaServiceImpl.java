@@ -13,7 +13,7 @@ public class ContrasenyaServiceImpl implements ContrasenyaService {
     public void comprobarContrasenya() {
         String pass = consoleInteractionService.solicitarDato(ConfigurationServiceImpl.MSG_SOLI_CONT);
 
-        int fortaleza = fortalezaService.calcularFortaleza(pass);
+        fortalezaService.calcularFortaleza(pass);
 
         consoleInteractionService.cierraConexion();
     }
